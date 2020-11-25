@@ -45,7 +45,9 @@ const AllCategories = ()=>{
 
     return(
         <div>
-            <h1 className='text-center mb-3 mt-5'>Food &amp; Drink</h1>
+            <Link className='titleCategory' exact to='food and drink'>
+                <h1 className='text-center mb-3 mt-5'>Food &amp; Drink</h1>
+            </Link>
             <Container>
                     <CategoryRow 
                         col1cat={"Restaurants"}
@@ -59,10 +61,12 @@ const AllCategories = ()=>{
                         col3link='coffee'
                         col4cat={"Food Trucks"}
                         col4img={foodtruckImage}
-                        col4link="food trucks and more"
+                        col4link="food trucks"
                         />
             </Container>
-                <h1 className='mt-5 mb-3 text-center'>Entertainment</h1>
+                <Link className='titleCategory' exact to='entertainment'>
+                    <h1 className='mt-5 mb-3 text-center'>Entertainment</h1>
+                </Link>
                 <Container>
                     <CategoryRow 
                         col1cat={"Dive/Snorkel"}
@@ -96,7 +100,9 @@ const AllCategories = ()=>{
                         />
                 </Container>
                 <Container>
-                <h1 className='mt-5 mb-3 text-center'>Shopping</h1>
+                    <Link className='titleCategory' exact to='shopping'>
+                        <h1 className='mt-5 mb-3 text-center'>Shopping</h1>
+                    </Link>
                     <CategoryRow 
                         col1cat={"Clothing"}
                         col1img={clothesImage}
@@ -112,7 +118,9 @@ const AllCategories = ()=>{
                         col4link="other shopping"
                         />
             </Container>
-            <h1 className='mt-5 mb-3 text-center'>Education</h1>
+            <Link className='titleCategory' exact to='education'>
+                <h1 className='mt-5 mb-3 text-center'>Education</h1>
+            </Link> 
             <Container>
                     <CategoryRow 
                         col1cat={"Day Cares"}
@@ -129,7 +137,9 @@ const AllCategories = ()=>{
                         col4link="other education"
                         />
             </Container>
-            <h1 className='mt-5 mb-3 text-center'>Professional Services</h1>
+                <Link className='titleCategory' exact to='professional services'>
+                    <h1 className='mt-5 mb-3 text-center'>Professional Services</h1>
+                </Link>
             <Container>
                     <CategoryRow 
                         col1cat={"Home Services"}
@@ -146,7 +156,9 @@ const AllCategories = ()=>{
                         col4link="other services"
                         />
             </Container>
-             <h1 className='mt-5 mb-3 text-center'>More Categories</h1>
+            {/* <Link className='titleCategory' exact to='more categories'> */}
+                <h1 className='mt-5 mb-3 text-center'>More Categories</h1>
+            {/* </Link> */}
             <Container>
                     <CategoryRow 
                         col1cat={"Health/ Medicine"}
@@ -180,7 +192,7 @@ const AllCategories = ()=>{
                         />
             </Container>
             <div className='mt-5 mb-5'>
-                <h6 className='text-center'>If you would like to see additional categories added here please <Link>contact us</Link></h6>
+                <h6 className='text-center'>If you would like to see additional categories or businesses added here please <Link>contact us</Link></h6>
             </div>
         </div>
     )   

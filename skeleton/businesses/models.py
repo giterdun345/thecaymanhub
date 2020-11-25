@@ -7,14 +7,14 @@ class HighCategories(models.TextChoices):
     SHOPPING = 'shopping'
     EDUCATION = 'education'
     PROFESSIONAL_SERVICES = 'professional services'
-    MORE_BUSINESSES = 'more businesses'
+    OTHER_BUSINESSES = 'other businesses'
 
 class Categories(models.TextChoices):
     # Food & Drink 
     RESTAURANTS = 'restaurants'
     BARS = 'bars'
     COFFEE ='coffee'
-    FOOD_TRUCKS_MORE = 'food trucks and more'
+    FOOD_TRUCKS = 'food trucks'
     # Entertainment 
     DIVE_SNORKEL = 'dive and snorkel'
     NIGHT_LIFE = 'night life'

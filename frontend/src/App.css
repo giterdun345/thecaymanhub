@@ -1,3 +1,4 @@
+/*/////////////////////////// LANDING /////////////////////////////////////////////////////// */
 .darken-image{
     margin: 0px;
     opacity: .3;
@@ -32,6 +33,11 @@
 
 }
 
+/*//////////////////////////////// CATEGORIES /////////////////////////////////////////////// */
+.titleCategory{
+    text-decoration: None;
+    color: black;
+}
 .cardCategory{
     text-decoration: None;
     color: black;
