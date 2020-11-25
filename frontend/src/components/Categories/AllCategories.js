@@ -59,7 +59,7 @@ const AllCategories = ()=>{
                         col3link='coffee'
                         col4cat={"Food Trucks"}
                         col4img={foodtruckImage}
-                        col4link="foodtrucks_more"
+                        col4link="food20%trucks20%FOODmore"
                         />
             </Container>
                 <h1 className='mt-5 mb-3 text-center'>Entertainment</h1>
@@ -67,32 +67,32 @@ const AllCategories = ()=>{
                     <CategoryRow 
                         col1cat={"Dive/Snorkel"}
                         col1img={diveImage}
-                        col1link="divesnorkel"
+                        col1link="dive20%and20%snorkel"
                         col2cat={"Night Life"}
                         col2img={nightlifeImage}
-                        col2link='nightlife'
+                        col2link='night20%life'
                         col3cat={"Water Sports"}
                         col3img={waterImage}
-                        col3link='watersports'
+                        col3link='water20%sports'
                         col4cat={"Kid Camps"}
                         col4img={kidImage}
-                        col4link="kidcamps"
+                        col4link="kid20%camps"
                         />
                 </Container>
                 <Container>
                     <CategoryRow 
-                        col1cat={"Musicians"}
+                        col1cat={"Music"}
                         col1img={musicImage}
-                        col1link="musicians"
+                        col1link="music"
                         col2cat={"Excursions"}
                         col2img={excursionImage}
                         col2link='excursions'
                         col3cat={"Places to See"}
                         col3img={caymanImage}
-                        col3link='placestosee'
+                        col3link='places20%to20%see'
                         col4cat={"Art/Photos"}
                         col4img={artImage}
-                        col4link="artphotography"
+                        col4link="art20%and20%photography"
                         />
                 </Container>
                 <Container>
@@ -106,10 +106,10 @@ const AllCategories = ()=>{
                         col2link='jewelry'
                         col3cat={"Home Goods"}
                         col3img={homegoodsImage}
-                        col3link='homegoods'
+                        col3link='home20%goods'
                         col4cat={"more..."}
                         col4img={otherImage}
-                        col4link="otherShopping"
+                        col4link="other20%shopping"
                         />
             </Container>
             <h1 className='mt-5 mb-3 text-center'>Education</h1>
@@ -117,7 +117,7 @@ const AllCategories = ()=>{
                     <CategoryRow 
                         col1cat={"Day Cares"}
                         col1img={daycareImage}
-                        col1link="daycare"
+                        col1link="day20%care"
                         col2cat={"Schools"}
                         col2img={schoolImage}
                         col2link='schools'
@@ -126,7 +126,7 @@ const AllCategories = ()=>{
                         col3link='college'
                         col4cat={"more..."}
                         col4img={othereduImage}
-                        col4link="otherEducation"
+                        col4link="other20%education"
                         />
             </Container>
             <h1 className='mt-5 mb-3 text-center'>Professional Services</h1>
@@ -134,7 +134,7 @@ const AllCategories = ()=>{
                     <CategoryRow 
                         col1cat={"Home Services"}
                         col1img={homeserviceImage}
-                        col1link="homeservice"
+                        col1link="home20%serviceS"
                         col2cat={"Construction"}
                         col2img={constructionImage}
                         col2link='construction'
@@ -143,7 +143,7 @@ const AllCategories = ()=>{
                         col3link='mechanics'
                         col4cat={"more..."}
                         col4img={moreserviceImage}
-                        col4link="moreservices"
+                        col4link="other20%services"
                         />
             </Container>
              <h1 className='mt-5 mb-3 text-center'>More Categories</h1>
@@ -151,10 +151,10 @@ const AllCategories = ()=>{
                     <CategoryRow 
                         col1cat={"Health/ Medicine"}
                         col1img={healthImage}
-                        col1link="health"
+                        col1link="health20%and20%medicine"
                         col2cat={"Real Estate"}
                         col2img={realestateImage}
-                        col2link='realestate'
+                        col2link='real20%estate'
                         col3cat={"Beauty"}
                         col3img={beautyImage}
                         col3link='beauty'
@@ -176,7 +176,7 @@ const AllCategories = ()=>{
                         col3link='animals'
                         col4cat={"more..."}
                         col4img={otherbizImage}
-                        col4link="otherbiz"
+                        col4link="other20%businesses"
                         />
             </Container>
             <div className='mt-5 mb-5'>

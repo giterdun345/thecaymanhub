@@ -1,12 +1,56 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+class HighCategories(models.TextChoices):
+    FOOD_DRINK = 'food and drink'
+    ENTERTAINMENT = 'entertainment'
+    SHOPPING = 'shopping'
+    EDUCATION = 'education'
+    PROFESSIONAL_SERVICES = 'professional services'
+    MORE_BUSINESSES = 'more businesses'
 
 class Categories(models.TextChoices):
+    # Food & Drink 
+    RESTAURANTS = 'restaurants'
     BARS = 'bars'
-    HEALTH = 'health'
-    INSURANCE = 'insurance'
+    COFFEE ='coffee'
+    FOOD_TRUCKS_MORE = 'food trucks more'
+    # Entertainment 
+    DIVE_SNORKEL = 'dive and snorkel'
+    NIGHT_LIFE = 'night life'
+    WATER_SPORTS = 'water sports'
+    KID_CAMPS = 'kid camps'
     MUSIC = 'music'
+    EXCURSIONS = 'excursions'
+    PLACES_TO_SEE = 'places to see'
+    ART_PHOTOGRAPHY ='art and photography'
+    # Shopping
+    CLOTHING = 'clothing'
+    JEWELRY = 'jewelry'
+    HOME_GOODS = 'home goods'
+    OTHER_SHOPPING = 'other shopping'
+    # Education
+    DAY_CARE = 'day care'    
+    SCHOOLS = 'schools'
+    COLLEGE = 'college'
+    OTHER_EDUCATION = 'other education'
+    # Professional Services
+    HOME_SERVICES = 'home services'
+    CONSTRUCTION = 'construction'
+    MECHANICS = 'mechanics'
+    OTHER_SERVICES = 'other services'
+    # More Categories 
+    HEALTH_MEDICINE = 'health and medicine'
+    REAL_ESTATE = 'real estate'
+    BEAUTY = 'beauty'
+    TRANSPORTATION = 'transportation'
+    RELIGION = 'religion'
+    TECHNOLOGY = 'technology'
+    ANIMALS = 'animals'
+    OTHER_BUSINESSES = 'other businesses'
+
+
+
 # more categories to be added upon initial setup
 # reference https://www.youtube.com/watch?v=l9M8J9UQBDM&list=PLJRGQoqpRwdcVLAoKo6WKHXbANBLeqfyX&index=2 
 # time 16.37 choice fields for categories when creating a business

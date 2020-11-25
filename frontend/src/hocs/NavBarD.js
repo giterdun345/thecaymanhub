@@ -21,19 +21,19 @@ const NavBarD = (props) =>{
                         title= {<span className="text-white my-auto">Categories</span>} 
                         id="collasible-nav-dropdown"
                     >
-                        <NavDropdown.Item href="fooddrink">Food &amp; Drink</NavDropdown.Item>
+                        <NavDropdown.Item href="food20%and20%drink">Food &amp; Drink</NavDropdown.Item>
                         <NavDropdown.Item href="entertainment">Entertainment</NavDropdown.Item>
                         <NavDropdown.Item href="shopping">Shopping</NavDropdown.Item>
                         <NavDropdown.Item href="education">Education</NavDropdown.Item>
-                        <NavDropdown.Item href="professionalservices">Professional Services</NavDropdown.Item>
+                        <NavDropdown.Item href="professional20%services">Professional Services</NavDropdown.Item>
                         <NavDropdown.Item href="health">Health &amp; Medicine</NavDropdown.Item>
-                        <NavDropdown.Item href="realestate">Real Estate</NavDropdown.Item>
+                        <NavDropdown.Item href="real20%estate">Real Estate</NavDropdown.Item>
                         <NavDropdown.Item href="beauty">Beauty</NavDropdown.Item>
-                        <NavDropdown.Item href="Transportation">Transport</NavDropdown.Item>
+                        <NavDropdown.Item href="transportation">Transport</NavDropdown.Item>
                         <NavDropdown.Item href="religion">Religion</NavDropdown.Item>
                         <NavDropdown.Item href="technology">Technology</NavDropdown.Item>
                         <NavDropdown.Item href="animals">Animals</NavDropdown.Item>
-                        <NavDropdown.Item href="otherbiz">And More</NavDropdown.Item>
+                        <NavDropdown.Item href="other20%businesses">And More</NavDropdown.Item>
 
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="allCategories">All Categories</NavDropdown.Item>
