@@ -1,0 +1,54 @@
+from django.db import models
+from django.template.defaultfilters import slugify
+
+
+class Categories(models.TextChoices):
+    BARS = 'bars'
+    HEALTH = 'health'
+    INSURANCE = 'insurance'
+    MUSIC = 'music'
+# more categories to be added upon initial setup
+# reference https://www.youtube.com/watch?v=l9M8J9UQBDM&list=PLJRGQoqpRwdcVLAoKo6WKHXbANBLeqfyX&index=2 
+# time 16.37 choice fields for categories when creating a business
+# also has thumbnails to use with businesses for card layout 
+
+
+class Biz (models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField()
+    category = models.CharField(max_length = 50, choices = Categories.choices, default= Categories.BARS)
+
+    created = models.DateTimeField(auto_now_add=True)
+    pic = models.FileField(upload_to='media')
+    address = models.CharField(max_length=200, blank=True)
+    email = models.EmailField(blank=True)
+    phone = models.CharField(max_length=25, blank=True)
+    confirmed = models.BooleanField(default=False)
+# reference https://www.youtube.com/watch?v=l9M8J9UQBDM&list=PLJRGQoqpRwdcVLAoKo6WKHXbANBLeqfyX&index=2 
+# time 16.37 choice fields for categories when creating a business
+# also has thumbnails to use with businesses for card layout 
+
+
+    class Meta:
+        ordering = ['created']
+
+    def __str__(self):
+        return self.title
+
+    def save(self, **kwargs):
+        """sluggifies the headline"""
+        original_slug = slugify(self.title)
+        queryset = Biz.objects.all().filter(slug__iexact = original_slug).count()
+        # counts how many headlines were the same not required only added for tut part inspect any relevance
+        count = 5
+        slug = original_slug
+        while(queryset):
+            #run until you find a slug that isn't the same 
+            slug = original_slug + '-' + str(count)
+            count += 1
+            queryset = Biz.objects.all().filter(slug__iexact = slug).count()
+
+        self.slug = slug
+        super(Biz, self).save( **kwargs)
+
+
