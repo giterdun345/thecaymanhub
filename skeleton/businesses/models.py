@@ -14,7 +14,7 @@ class Categories(models.TextChoices):
     RESTAURANTS = 'restaurants'
     BARS = 'bars'
     COFFEE ='coffee'
-    FOOD_TRUCKS_MORE = 'food trucks more'
+    FOOD_TRUCKS_MORE = 'food trucks and more'
     # Entertainment 
     DIVE_SNORKEL = 'dive and snorkel'
     NIGHT_LIFE = 'night life'

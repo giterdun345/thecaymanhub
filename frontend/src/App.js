@@ -19,7 +19,7 @@ function App() {
             <Route exact path='/home' component = {Home}></Route>
             {/* Categories  */}
             <Route exact path='/allCategories' component = {AllCategories} />
-            <Route exact path='/category/:id' component = {}></Route>
+            {/* <Route exact path='/category/:id' component = {}></Route> */}
             {/* <Route exact path= '/restaurants' component = {FoodDrink} />
             <Route exact path='/business' component = {}></Route>
             <Route exact path='/business/:id' component = {}></Route>
