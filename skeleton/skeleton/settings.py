@@ -29,6 +29,10 @@ INSTALLED_APPS = [
 # local apps 
     'businesses',
 
+# delete upon production 
+'debug_toolbar',
+'elastic_panel',
+
 ]
 
 MIDDLEWARE = [
@@ -41,7 +45,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+
+    ]
+
+MIDDLEWARE += (  # delete upon production
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar_force.middleware.ForceDebugToolbarMiddleware',
+)
 
 ROOT_URLCONF = 'skeleton.urls'
 
@@ -97,6 +107,12 @@ ELASTICSEARCH_DSL = {
     },
 }
 
+# Name of the Elasticsearch index
+ELASTICSEARCH_INDEX_NAMES = {
+    # 'search_indexes.document.biz': 'biz',
+    'search_indexes.document': 'review',
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -139,3 +155,27 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# delete upon production 
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
+DEBUG_TOOLBAR_PANELS = (
+    # Defaults
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+    # Additional
+    'elastic_panel.panel.ElasticDebugPanel',
+)
