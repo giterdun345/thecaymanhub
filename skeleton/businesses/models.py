@@ -61,9 +61,9 @@ class Biz (models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     category = models.CharField(max_length = 50, choices = Categories.choices, default= Categories.BARS)
-
+    highCategories = models.CharField(max_length = 50, choices = HighCategories.choices, default= HighCategories.OTHER_BUSINESSES)
     created = models.DateTimeField(auto_now_add=True)
-    pic = models.FileField(upload_to='media')
+    pic = models.FileField(upload_to='media', blank=True)
     address = models.CharField(max_length=200, blank=True)
     email = models.EmailField(blank=True)
     phone = models.CharField(max_length=25, blank=True)
@@ -95,4 +95,24 @@ class Biz (models.Model):
         self.slug = slug
         super(Biz, self).save( **kwargs)
 
+class Rate(models.IntegerChoices):
+    worst = 1
+    not_great = 2
+    good = 3
+    better = 4
+    best = 5
 
+class Review(models.Model):
+    # pic = models.FileField(upload_to='media')
+    author = models.CharField(max_length=100)
+    headline = models.CharField(max_length=100)
+    # biz = models.ForeignKey(Biz, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)        
+    rating = models.IntegerField(choices = Rate.choices)
+    comment = models.CharField(max_length=1000)
+    
+    class Meta:
+        ordering = ['created']
+
+    def __str__(self):
+        return self.headline
