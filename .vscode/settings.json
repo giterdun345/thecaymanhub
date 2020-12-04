@@ -1,4 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\marti\\Anaconda3\\envs\\gigWebsite\\python.exe",
-    "git.ignoreLimitWarning": true
+    "python.pythonPath": "C:\\Users\\marti\\Anaconda3\\envs\\elasticSearch\\python.exe",
+    "git.ignoreLimitWarning": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": false,
+    "python.linting.enabled": true
 }

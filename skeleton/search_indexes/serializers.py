@@ -1,9 +1,9 @@
-from rest_framework import serializers
-from businesses.models import Review
+from django_elasticsearch_dsl_drf.serializers import DocumentSerializer
+from .document import ReviewDocument
 
-class ReviewDocumentSerializer(serializers.ModelSerializer):
+class ReviewDocumentSerializer(DocumentSerializer):
     """Serializer python object => json """
     class Meta:
-        model = Review
+        model = ReviewDocument
         fields = '__all__'
         read_only_fields = fields

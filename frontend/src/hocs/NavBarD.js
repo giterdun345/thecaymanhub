@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Navbar, NavDropdown, Nav, Button } from 'react-bootstrap'
-import logo from '../components/images/logotrans3.png'
+import logo from '../components/images/logobg2.jpg'
 import Home from '../components/Home'
 const NavBarD = (props) =>{
      return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand className='mr-3' href="/">
-            <img className='mr-3' src={logo}/>
+            <img className='mr-3' src={logo} style={{borderRadius:"30%"}}/>
             {/* The Cayman Hub */}
             </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -59,7 +59,7 @@ const AllCategories = ()=>{
                         col3cat={"Coffee & Tea"}
                         col3img={coffeeImage}
                         col3link='coffee'
-                        col4cat={"Food Trucks"}
+                        col4cat={"Trucks/ Stands"}
                         col4img={foodtruckImage}
                         col4link="food trucks"
                         />

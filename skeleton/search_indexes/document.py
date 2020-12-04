@@ -3,7 +3,6 @@ from django_elasticsearch_dsl import Document, Index, fields
 from elasticsearch_dsl import analyzer
 from businesses.models import Review
 
-print(settings.ELASTICSEARCH_INDEX_NAMES)
 ## Name of the Elasticsearch index
 INDEX = Index(settings.ELASTICSEARCH_INDEX_NAMES[__name__])
 
